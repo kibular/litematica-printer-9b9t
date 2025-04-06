@@ -62,8 +62,6 @@ public class PrepareAction extends Action {
             } else if (slot != -1) {
                 if (PlayerInventory.isValidHotbarIndex(slot)) {
                     inventory.selectedSlot = slot;
-                } else {
-                    inventory.selectedSlot = slot;
                 }
             }
         }
