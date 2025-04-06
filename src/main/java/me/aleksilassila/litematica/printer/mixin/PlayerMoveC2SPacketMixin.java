@@ -20,7 +20,7 @@ public class PlayerMoveC2SPacketMixin {
         PrepareAction action = printer.actionHandler.lookAction;
         if (action != null && action.modifyYaw) {
             Printer.printDebug("YAW: {}", action.yaw);
-            return action.yaw;
+            return yaw;
         } else {
             return yaw;
         }
@@ -36,7 +36,7 @@ public class PlayerMoveC2SPacketMixin {
         PrepareAction action = printer.actionHandler.lookAction;
         if (action != null && action.modifyPitch) {
             Printer.printDebug("PITCH: {}", action.pitch);
-            return action.pitch;
+            return pitch;
         } else {
             return pitch;
         }

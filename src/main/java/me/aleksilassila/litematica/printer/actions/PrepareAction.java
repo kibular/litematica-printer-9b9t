@@ -23,7 +23,7 @@ public class PrepareAction extends Action {
         Direction lookDirection = context.lookDirection;
 
         if (lookDirection != null && lookDirection.getAxis().isHorizontal()) {
-            this.yaw = lookDirection.asRotation();
+            this.yaw = 90f;
         } else {
             this.modifyYaw = false;
         }
@@ -56,14 +56,14 @@ public class PrepareAction extends Action {
 
             // This thing is straight from MinecraftClient#doItemPick()
             if (player.getAbilities().creativeMode) {
-                inventory.addPickBlock(itemStack);
+               // inventory.addPickBlock(itemStack);
                 client.interactionManager.clickCreativeStack(player.getStackInHand(Hand.MAIN_HAND),
                         36 + inventory.selectedSlot);
             } else if (slot != -1) {
                 if (PlayerInventory.isValidHotbarIndex(slot)) {
                     inventory.selectedSlot = slot;
                 } else {
-                    client.interactionManager.pickFromInventory(slot);
+                    inventory.selectedSlot = slot;
                 }
             }
         }
@@ -75,7 +75,7 @@ public class PrepareAction extends Action {
             PlayerMoveC2SPacket packet = new PlayerMoveC2SPacket.Full(player.getX(), player.getY(), player.getZ(), yaw,
                     pitch, player.isOnGround(), player.horizontalCollision);
 
-            player.networkHandler.sendPacket(packet);
+            //player.networkHandler.sendPacket(packet);
         }
 
         if (context.shouldSneak) {

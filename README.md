@@ -1,9 +1,12 @@
-# Litematica Printer
+litematica printer with rotations NUKED for 9b9t use
+
+# Litematica Printer - 9b9t Edition
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/aleksilassila/litematica-printer)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/aleksilassila/litematica-printer)
 ![GitHub all releases](https://img.shields.io/github/downloads/aleksilassila/litematica-printer/total)
 ![GitHub Repo stars](https://img.shields.io/github/stars/aleksilassila/litematica-printer)
+
 
 This extension adds printing functionality for [Litematica fabric](https://github.com/maruohon/litematica). Printer
 allows players to build big structures more quickly by automatically placing the correct blocks around you.
