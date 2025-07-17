@@ -58,10 +58,10 @@ public class PrepareAction extends Action {
             if (player.getAbilities().creativeMode) {
                // inventory.addPickBlock(itemStack);
                 client.interactionManager.clickCreativeStack(player.getStackInHand(Hand.MAIN_HAND),
-                        36 + inventory.selectedSlot);
+                        36 + inventory.getSelectedSlot());
             } else if (slot != -1) {
                 if (PlayerInventory.isValidHotbarIndex(slot)) {
-                    inventory.selectedSlot = slot;
+                    inventory.setSelectedSlot(slot);
                 }
             }
         }

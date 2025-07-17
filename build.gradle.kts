@@ -1,5 +1,5 @@
 plugins {
-    id("fabric-loom").version("1.8-SNAPSHOT")
+    id("fabric-loom").version("1.10.1")
     id("maven-publish")
 }
 
@@ -43,8 +43,8 @@ dependencies {
     //modImplementation("curse.maven:litematica-${litematica_projectid}:${litematica_fileid}")
 
     // Sakura's Jitpack
-    modImplementation("com.github.sakura-ryoko:malilib:1.21.4-0.23.3-sakura.1")
-    modImplementation("com.github.sakura-ryoko:litematica:1.21.4-0.21.0-sakura.1")
+    modImplementation("com.github.sakura-ryoko:malilib:1.21.5-0.24.2")
+    modImplementation("com.github.sakura-ryoko:litematica:1.21.5-0.22.2")
 
     // For Mod Menu display
     modCompileOnly("com.terraformersmc:modmenu:${mod_menu_version}")
@@ -65,7 +65,7 @@ tasks.register("copyJar") {
     // Specify the task's action
     doLast {
         val destination = file("build/${archives_base_name}-${minecraft_version}-${mod_version}.jar")
-        file("build/libs/litematica-printer.jar").copyTo(destination, true)
+        file("build/libs/litematica-printer-9b9t.jar").copyTo(destination, true)
         println("Copied output to ${destination.absolutePath}")
     }
 }
